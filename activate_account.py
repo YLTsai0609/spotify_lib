@@ -10,16 +10,17 @@ import os
 from os.path import join as PJ
 import pandas as pd
 import pendulum
-from absl import app, flags
+import click
 from dotenv import load_dotenv
-from absl.flags import FLAGS
 
-flags.DEFINE_string(
-    "out_folder", ".access_token", "the path you put your tempory access_token"
+
+@click.command()
+@click.option(
+    "--out_folder",
+    default=".access_token",
+    help="the path you put your tempory access_token.",
 )
-
-
-def main(_argv) -> None:
+def main(out_folder: str) -> None:
 
     load_dotenv()
     CLIENT_ID = os.getenv("CLIENT_ID")
@@ -32,7 +33,7 @@ def main(_argv) -> None:
 
     date: str = pendulum.now("Asia/Taipei").format("YYYYMMDD")
     timestamp: str = pendulum.now("Asia/Taipei").format("YYYYMMDD_HHmmss")
-    out_filepath = PJ(FLAGS.out_folder, f"{date}.csv")
+    out_filepath = PJ(out_folder, f"{date}.csv")
 
     resp = requests.post(TOKEN_URL, auth=(CLIENT_ID, CLIENT_SECRET), data=payload)
     access_token_log = resp.json()
@@ -47,7 +48,4 @@ def main(_argv) -> None:
 
 
 if __name__ == "__main__":
-    try:
-        app.run(main)
-    except SystemExit:
-        pass
+    main()
