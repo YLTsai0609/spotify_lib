@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "spotify_lib"
+version = "0.1.0"
+description = "using spotify webapi to create some interesting app"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.27.1"
+pandas = "^1.4.2"
+pendulum = "^2.1.2"
+python-dotenv = "^0.20.0"
+click = "^8.1.2"
+
+[tool.poetry.dev-dependencies]
+black = {version = "^22.3.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
