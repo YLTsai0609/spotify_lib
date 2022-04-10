@@ -29,10 +29,11 @@ input : q = {track_name}
 output : spotify_id
 
 1. [x] - search by tracks with query in english
-2. [ ] - search by tracks with query in chinese
+2. [x] - search by tracks with query in chinese
    * TODO - how to encode chinese to match spotify search api?
      * https://stackoverflow.com/questions/38600436/how-to-url-encode-chinese-characters
-3. [ ] - search by query = {track, artist} for more precise 
+3. [x] - search by query = {track, artist} for more precise 
+4. [ ] - build a operator(input csv, output csv)
 
 ## Audio Feature
 
