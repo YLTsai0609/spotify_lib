@@ -23,5 +23,21 @@
    - [x] create a private folder `access_token`
    - [x] python activate_account.py
 
+## Search
+
+input : q = {track_name}
+output : spotify_id
+
+1. [x] - search by tracks with query in english
+2. [ ] - search by tracks with query in chinese
+   * TODO - how to encode chinese to match spotify search api?
+     * https://stackoverflow.com/questions/38600436/how-to-url-encode-chinese-characters
+3. [ ] - search by query = {track, artist} for more precise 
+
 ## Audio Feature
+
+input : spotify_id
+output : audio feature
+
+
  
