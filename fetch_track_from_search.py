@@ -35,21 +35,17 @@ class Task(_Task):
         token_type: str = None,
         token: str = None,
     ) -> dict:
-        qstring = f"query=track:{quote(track)}+atrist:{quote(artist)}&type=track&include_external=audio&offset=0&limit={str(limit)}"
 
-        # params = dict(
-        #     q=f"track:{quote(track)}+atrist:{quote(artist)}",
-        #     type="track",
-        #     include_external="audio",
-        #     limit=1,
-        # )
+        qstring = f"query={quote(track)} {quote(artist)}&type=track&include_external=audio&offset=0&limit={str(limit)}"
+        # qstring = f"query=track:{quote(track)}+atrist:{quote(artist)}&type=track&include_external=audio&offset=0&limit={str(limit)}"
+        # NOTE: the doc on spotify seems to be wrong
+        # we can search only the track name and artist name without add track:...+artist:...
+        # ref : https://stackoverflow.com/questions/64461018/using-python-to-get-a-track-from-the-spotify-api-by-using-search-endpoint
 
         headers = {
             "Authorization": f"{token_type} {token}",
             "Content-Type": "application/json",
         }
-        # headers = {"access_token": token}
-        print(f"{endpoint}?{qstring}")
-        # resp = requests.get(endpoint, params=params, headers=headers)
+
         resp = requests.get(f"{endpoint}?{qstring}", headers=headers)
         return resp.json()
