@@ -1,6 +1,6 @@
 {
     "tracks": {
-        "href": "https://api.spotify.com/v1/search?query=track%3A%E5%A5%BD%E4%B8%8D%E5%AE%B9%E6%98%93&type=track&include_external=audio&offset=0&limit=1",
+        "href": "https://api.spotify.com/v1/search?query=track%3A%E5%A5%BD%E4%B8%8D%E5%AE%B9%E6%98%93+artist%3A%E5%91%8A%E4%BA%94%E4%BA%BA&type=track&include_external=audio&offset=0&limit=1",
         "items": [
             {
                 "album": {
@@ -160,7 +160,6 @@
                         "QA",
                         "RO",
                         "RS",
-                        "RU",
                         "RW",
                         "SA",
                         "SB",
@@ -387,7 +386,6 @@
                     "QA",
                     "RO",
                     "RS",
-                    "RU",
                     "RW",
                     "SA",
                     "SB",
@@ -443,7 +441,7 @@
                 "id": "6jNy9WM3zyvG9E5bdVALl8",
                 "is_local": false,
                 "name": "好不容易 (《華燈初上》片尾曲)",
-                "popularity": 70,
+                "popularity": 68,
                 "preview_url": "https://p.scdn.co/mp3-preview/7e0e5e02e079d914c5ce1d64c6bb52812877c7c7?cid=24c65b22bb194a7f959900db705771c9",
                 "track_number": 1,
                 "type": "track",
@@ -451,9 +449,9 @@
             }
         ],
         "limit": 1,
-        "next": "https://api.spotify.com/v1/search?query=track%3A%E5%A5%BD%E4%B8%8D%E5%AE%B9%E6%98%93&type=track&include_external=audio&offset=1&limit=1",
+        "next": "https://api.spotify.com/v1/search?query=track%3A%E5%A5%BD%E4%B8%8D%E5%AE%B9%E6%98%93+artist%3A%E5%91%8A%E4%BA%94%E4%BA%BA&type=track&include_external=audio&offset=1&limit=1",
         "offset": 0,
         "previous": null,
-        "total": 28
+        "total": 2
     }
 }
